@@ -51,7 +51,9 @@ echo "luks-cryptvol01 UUID=$(cryptsetup luksUUID /dev/mapper/cryptodg-cryptvol01
 cryptsetup luksOpen /dev/mapper/cryptodg-cryptvol01 luks-cryptvol01  --key-file /root/fs.key
 ```
 **7. Reboot the system just to make sure everything works as expected**
-**8. Check the mapped encrypted volume is visible. You can also check /dev/mapper**
+
+**8. Check the mapped encrypted volume is visible.** 
+You can check /dev/mapper or lsblk to check it
 ```
 lsblk
 NAME                     MAJ:MIN RM  SIZE RO TYPE  MOUNTPOINT
